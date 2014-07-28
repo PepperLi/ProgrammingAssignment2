@@ -9,6 +9,8 @@ makeCacheMatrix <- function(x = matrix()) {
         x<<-y
         m<<-NULL
   }
+## setinverse assigns inv to parent environ's inverse
+## getinverse returns the inverse value 
   get<-function() x
   setmatrix<-function(solve) m<<- solve
   getmatrix<-function() m
@@ -20,7 +22,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Write a short comment describing this function
 ## this function calculate the inverse the a matrix and also a vectoe
-
+##  If the inverse has already been calculated and the matrix has not changed, then cacheSolve should retrieve 
+## the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
